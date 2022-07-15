@@ -1,0 +1,62 @@
+{
+  "name": "@freakycoder/react-native-multiple-select",
+  "version": "0.3.0",
+  "description": "Customizable & Animated, Easy to Use Multiple Select Library for React Native",
+  "main": "./build/dist/RNMultiSelect.js",
+  "repository": "git@github.com:WrathChaos/react-native-multiple-select.git",
+  "author": "FreakyCoder <kurayogun@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://www.freakycoder.com",
+  "bugs": "https://github.com/WrathChaos/react-native-multiple-select/issues",
+  "keywords": [
+    "multiple",
+    "select",
+    "multiple-select",
+    "picker",
+    "multiple-picker",
+    "FreakyCoder",
+    "freakycoder",
+    "kuray",
+    "Kuray",
+    "react",
+    "react-native",
+    "javascript",
+    "ui-lib",
+    "rn"
+  ],
+  "scripts": {
+    "build": "cd lib && tsc && cp ../package.json ../build/dist/ && Echo Build completed!",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "peerDependencies": {
+    "@freakycoder/react-native-bounceable": ">= 0.1.0",
+    "react-native-animated-spinkit": ">= 1.5.2",
+    "react-native-bouncy-checkbox": ">= 1.0.7"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.22",
+    "@types/react-native": "^0.63.0",
+    "react-native-typescript-transformer": "^1.2.13",
+    "typescript": "^3.7.4",
+    "@react-native-community/eslint-config": "^0.0.5",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./src/*.{js,jsx,ts,tsx}": [
+      "npx prettier --write",
+      "eslint src/*.js --fix-dry-run"
+    ]
+  }
+}
