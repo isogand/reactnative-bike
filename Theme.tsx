@@ -35,7 +35,7 @@ export const palette = {
     v4: "#79907A",
     v5: "#8D7393",
     v6: "#5D6696",
-    c1: "rgba(255,168,241,0.47)",
+    c1: "rgba(255,255,255,0.22)",
     c2: "rgba(132,196,255,0.49)",
     c3: "rgba(246,54,54,0.51)",
     c4: "rgba(162,255,89,0.54)",
@@ -86,6 +86,7 @@ const theme = createTheme({
         m: 10,
         l: 25,
         xl: 75,
+        mxl:200,
     },
     textVariants: {
         hero: {

@@ -40,6 +40,7 @@ const RoundIcon = ({
 RoundIcon.defaultProps = {
     iconRatio: 0.7,
     align: "center",
+
 };
 
 export default RoundIcon;

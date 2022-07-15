@@ -32,17 +32,18 @@ const Subslide = ({description,subtitle,last,onPress}:SubslideProps) => {
         <View pattern={2} {...{ footer }} style={styles.container}>
             <Text variant="title2" style={styles.subtitle}>{subtitle}</Text>
             <Text variant="body2" style={styles.description}>{description}</Text>
+            <View style={{margin:10}}/>
             {last ?  (
                 <Button
-                    style={{marginBottom:wp(-5)}}
-                label="LOGIN"
+                    style={{marginBottom:wp(-10)}}
+                label="MORE"
                   {...{ onPress }}
                 />
                 ): null}
 
             {last? (
                 <Box style={{bottom:10,position:'absolute'}}>
-                    {footer}
+                    {/*{footer}*/}
                 </Box>
             ):null}
         </View>

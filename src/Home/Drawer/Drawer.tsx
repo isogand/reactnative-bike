@@ -28,9 +28,9 @@ const items: DrawerItemProps[] = [
 ]
 const data = [
     { icon: "instagram", color: "i1" },
-    { icon: "twitter",  color: "i2" },
-    { icon: "youtube",  color: "i3" },
-    { icon: "dribbble",  color: "i4" },
+    { icon: "twitter",  color: "i1" },
+    { icon: "youtube",  color: "i1" },
+    { icon: "dribbble",  color: "i1" },
 ]
 
 const Drawer = () => {
@@ -118,6 +118,7 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         marginTop: hp(5),
         flex:0.25,
+
     },
     icons: {
         alignItems: "center",
@@ -127,5 +128,7 @@ const styles = StyleSheet.create({
         padding:20,
         borderRadius:50,
         margin:hp(0.25),
+        borderWidth: 2,
+        borderColor: "#a9a9a9",
     }
 });

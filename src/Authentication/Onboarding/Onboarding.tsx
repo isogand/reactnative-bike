@@ -138,8 +138,8 @@ const Onboarding = ({ navigation }: AuthNavigationProps<"Onboarding">) => {
                                         key={index}
                                         onPress={() => {
                                             if (last) {
-                                                navigation.navigate("Login");
-                                                // navigation.navigate("Welcome");
+                                                // navigation.navigate("Login");
+                                                navigation.navigate("Welcome");
                                             } else {
                                                 scroll.current
                                                     ?.getNode()
