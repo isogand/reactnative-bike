@@ -39,4 +39,5 @@ export type HomeRoutes = {
     Cart: undefined;
     Animations:undefined;
     AnimationsDetail:undefined;
+    Information:undefined;
 };

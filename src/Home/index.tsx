@@ -11,9 +11,10 @@ import TransactionHistory from "./TransactionHistory";
 import EditProfile from "./EditProfile";
 import Settings from "./Settings";
 import Cart from "./Cart";
-import Animations from "./OutfitIdeas/Animations";
-import AnimationsDetail from "./OutfitIdeas/AnimationsDetail";
+import Animations from "./OutfitIdeas/animation/Animations";
+import AnimationsDetail from "./OutfitIdeas/animation/animationdetail/AnimationsDetail";
 import {createStackNavigator} from "@react-navigation/stack";
+import Information from "./OutfitIdeas/animation/moredetail/Information";
 
 const Drawer = createDrawerNavigator<HomeRoutes>();
 const Stack = createStackNavigator();
@@ -23,6 +24,7 @@ const MainStack = () => {
         <Stack.Navigator>
             <Stack.Screen options={{headerShown: false}} name="Animations" component={Animations} />
             <Stack.Screen options={{headerShown: false}} name="AnimationsDetail" component={AnimationsDetail} />
+            <Stack.Screen options={{headerShown: false}} name="Information" component={Information} />
         </Stack.Navigator>
     )
 }

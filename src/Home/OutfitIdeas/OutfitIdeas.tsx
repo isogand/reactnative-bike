@@ -3,8 +3,8 @@ import {Box} from "../../components";
 import Header from "../../components/Header";
 import Background from "./Background";
 import {HomeNavigationProps} from "../../components/Navigation";
-import Animations from "./Animations";
-import TabBar from "../Tabar/TabBar";
+import Animations from "./animation/Animations";
+import TabBar from "./Tabar/TabBar";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import {getUrl} from "../../utils";
 
@@ -31,7 +31,7 @@ const OutfitIdeas = ({ navigation }: HomeNavigationProps<"OutfitIdeas">) => {
 
 
     return (
-        <Box flex={1} backgroundColor="background">
+        <Box flex={1} backgroundColor="background3">
             <Header
                 title="Outfit Ideas"
                 left={{ icon: "menu", onPress: () => navigation.openDrawer() }}
