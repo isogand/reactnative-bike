@@ -23,7 +23,7 @@ const SWITCH_CONTAINER_HEIGHT = scale(70);
 const CIRCLE_WIDTH = scale(60);
 const CIRCLE_HEIGHT = scale(70);
 const BORDER = scale(1);
-const TRACK_CIRCLE_WIDTH = 150;
+const TRACK_CIRCLE_WIDTH = 160;
 
 type ContextType = {
     translateX: number,
@@ -38,7 +38,7 @@ type SwitchButtom = {
 const SwitchButtom = ({value, onChange, backgroundColor}: SwitchButtom) => {
     const [isToggled, setIsToggled] = useState(value);
     console.log(isToggled);
-    const translateX = useSharedValue(15);
+    const translateX = useSharedValue(10);
     useEffect(() => {
         onChange(isToggled);
     }, [isToggled]);
@@ -73,12 +73,12 @@ const SwitchButtom = ({value, onChange, backgroundColor}: SwitchButtom) => {
         },
         onEnd: ({velocityX}) => {
             const selectedSnapPoint = snapPoint(translateX.value, velocityX, [
-                15,
+                10,
                 TRACK_CIRCLE_WIDTH,
             ]);
             translateX.value = withSpring(selectedSnapPoint);
-            console.log(selectedSnapPoint !== 15, '654646');
-            runOnJS(setIsToggled)(selectedSnapPoint !== 15);
+            console.log(selectedSnapPoint !== 10, '654646');
+            runOnJS(setIsToggled)(selectedSnapPoint !== 10);
         },
     });
 

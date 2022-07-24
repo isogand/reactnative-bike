@@ -7,6 +7,8 @@ import TopInformation from "./TopInformation";
 import SwipeButton from "../components/Buttom";
 import Animated from "react-native-reanimated"
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import MoreImage from "./moreImage/Image";
+import Message from "./message/Message";
 
 export default function Information({navigation, route}: HomeNavigationProps<"Information">) {
     const {item} = route.params;
@@ -46,9 +48,13 @@ export default function Information({navigation, route}: HomeNavigationProps<"In
                </Box>
                 <Box style={{padding:15}}>
                     <Box style={styles.content} >
-                        <Text>Mini crossbody bag available in various colours. Featuring two compartments. Handles and
-                            detachable crossbody shoulder strap. Lined interior. Clasp with two metal pieces.</Text>
+                        <Box  flex={1} style={styles.picture}>
+                            <MoreImage item={item}/>
+                        </Box>
 
+                        <Box  style={[styles.text]}>
+                            <Message/>
+                        </Box>
                     </Box>
                 </Box>
 
@@ -64,10 +70,19 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         width: '90%',
         marginTop:wp(-5)
+
     },
     content : {
         backgroundColor:'#444444',
         borderRadius:15
+    },
+    picture: {
+        marginTop:wp(10),
+        height:220
+    },
+    text: {
+        marginTop:wp(10),
+        alignItems:'center',
+        justifyContent:'center'
     }
-
 });

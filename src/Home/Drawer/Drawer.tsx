@@ -27,10 +27,10 @@ const items: DrawerItemProps[] = [
     },
 ]
 const data = [
-    { icon: "instagram", color: "i1" },
-    { icon: "twitter",  color: "i1" },
-    { icon: "youtube",  color: "i1" },
-    { icon: "dribbble",  color: "i1" },
+    { icon: "instagram", color: "i1" ,key: '1'},
+    { icon: "twitter",  color: "i1", key: '2'},
+    { icon: "youtube",  color: "i1" ,key: '3'},
+    { icon: "dribbble",  color: "i1" ,key: '4'},
 ]
 
 const Drawer = () => {
@@ -91,6 +91,7 @@ const Drawer = () => {
                         {data.map(item =>
                             // <View style={styles.icons}/>
                             <RoundIcon
+                             key={item.key}
                              name={item.icon}
                              backgroundColor={item.color}
                              iconRatio={0.5}

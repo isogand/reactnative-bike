@@ -68,7 +68,9 @@ export default function TopInformation({item}:PropsWithChildren<Props>) {
                                 <TouchableOpacity style={{flexDirection:'row'}}>
                                     {data.map(items =>
                                         // <View style={styles.icons}/>
+
                                         <RoundIcon
+                                            key={items.icon}
                                             name={items.icon}
                                             iconRatio={0.5}
                                             color="background5"
